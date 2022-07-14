@@ -9,7 +9,6 @@ def merge_sort(array):  # "разделяй"
         right = merge_sort(array[middle:])  # и правую
         return merge(left, right)  # выполняем слияние
 
-
 def merge(left, right):
     result = []
     i, j = 0, 0
@@ -34,7 +33,6 @@ def merge(left, right):
 
 print(merge_sort(array))
 
-
 def binary_search(array, element, left, right):
     if left > right:  # если левая граница привысила правую,
         return False  # значит элемент отсутствует
@@ -47,7 +45,6 @@ def binary_search(array, element, left, right):
         return binary_search(array, element, left, middle - 1)
     else:  # иначе в правой
         return binary_search(array, element, middle + 1, right)
-
 
 while True:
     try:
